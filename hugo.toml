@@ -1,4 +1,4 @@
-baseurl = "ronghua.com"
+baseurl = "ronghua.cn"
 title = "RONGHUALI PAGE"
 theme = "hugo-coder"
 languagecode = "en"
@@ -41,7 +41,7 @@ style = "github-dark"
   category = "categories"
   series = "series"
   tag = "tags"
-  author = "authors"
+  # author = "authors"
 
 # Social links
 [[params.social]]
