@@ -74,7 +74,7 @@ CA 模型并不是由严格定义的函数或动力方程确定，它构成的�
 
 逻辑回归通过使用逻辑函数（也称为 Sigmoid 函数）将线性回归的输出映射到 0 和 1 之间，从而预测某个事件发生的概率。图 3.3 为 Logistic 回归函数图像。
 
-<img src="./pics/image-20250725151840400.png" alt="image-20250725151840400" style="zoom:40%;" />
+<img src="./CA.assets/image-20250725151840400.png" alt="image-20250725151840400" style="zoom:40%;" />
 
 ## 模型公式
 
@@ -148,7 +148,7 @@ $$
 
 邻域作用部分通过 3×3 的窗口计算城市用地在空间上的互相影响：
 $$
-\Omega_{i,j}^t =  \frac{\text{con}(S_{i,j}= \text{urban})}{3+3-1})
+\Omega_{i,j}^t =  \frac{\text{con}(S_{i,j}= \text{urban})}{3+3-1}
 $$
 其中，Ω 是邻域函数，$\text{con}(S_{i,j}= \text{urban})$ 为$S_{i,j}$ 城市用地的条件函数。
 
