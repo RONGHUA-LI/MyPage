@@ -12,6 +12,22 @@ pagerSize = 20
 # [services.disqus]
 # shortname = "yourdiscussshortname"
 
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    startLevel = 2
+    ordered = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # This allows HTML in markdown
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+
 [markup.highlight]
 style = "github-white"
 
@@ -27,6 +43,9 @@ style = "github-white"
   favicon_16 = "/img/favicon-16x16.png"
 
   since = 2025
+
+
+  math = true  # Enable math support
 
   enableTwemoji = true
 

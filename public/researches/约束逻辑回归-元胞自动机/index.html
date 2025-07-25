@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  约束逻辑回归-元胞自动机 · RONGHUALI PAGE
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="RONGHUA LI">
+<meta name="description" content="
+  元胞自动机（CA）
+  
+    
+    Link to heading
+  
+
+
+  元胞自动机的基本概念
+  
+    
+    Link to heading
+  
+
+元胞自动机（Cellular Automata，CA）是一种在时空和状态上都离散，空间相互作用和时间因果关系皆基于微观的网格动力学模型[63]。
+
+[63] 黎夏, 叶嘉安. 约束性单元自动演化 CA 模型及可持续城市发展形态的模拟[J]. 地理学报, 1999, (4):3-12.
+元胞自动机**“自下而上”**的研究思路、强大的时空运算的能力及其动态演变的特征为地理学家研究复杂的地理现象提供了新的视角。
+谢一春将元胞自动机过程归纳为结构和运算两个部分[64]。
+
+[64] Michael Batty, Yichun Xie. Possible urban automata[J]. Environment and Planning B. 1997, 24: 175-192.
+标准的 CA 模型包括：元胞、状态、邻域以及转换规则如（图 3.2）。
+
+
+  元胞
+  
+    
+    Link to heading
+  
+
+元胞是元胞自动机最基本的构成单元，通常是规则的格网单元，一般按照三角形、 正方形或者六边形网格排列，其中，比较常见的是正方形元胞，分布在离散的欧几里德空间的网格上。
+元胞自动机模型中所有元胞无论在时间还是空间上状态都是离散的，并且在特定的时刻，每个元胞只可能是有限状态的一种。
+
+  邻域
+  
+    
+    Link to heading
+  
+
+与元胞相邻的空间，是指以元胞为中心，按一定的规则或形状划分的该元胞的空间集合，是元胞自动机模型中 转换规则基于的要素空间。">
+<meta name="keywords" content="blog,study,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="约束逻辑回归-元胞自动机">
+  <meta name="twitter:description" content="元胞自动机（CA）Link to heading元胞自动机的基本概念Link to heading元胞自动机（Cellular Automata，CA）是一种在时空和状态上都离散，空间相互作用和时间因果关系皆基于微观的网格动力学模型[63]。
+[63] 黎夏, 叶嘉安. 约束性单元自动演化 CA 模型及可持续城市发展形态的模拟[J]. 地理学报, 1999, (4):3-12.
+元胞自动机**“自下而上”**的研究思路、强大的时空运算的能力及其动态演变的特征为地理学家研究复杂的地理现象提供了新的视角。
+谢一春将元胞自动机过程归纳为结构和运算两个部分[64]。
+[64] Michael Batty, Yichun Xie. Possible urban automata[J]. Environment and Planning B. 1997, 24: 175-192.
+标准的 CA 模型包括：元胞、状态、邻域以及转换规则如（图 3.2）。
+元胞Link to heading元胞是元胞自动机最基本的构成单元，通常是规则的格网单元，一般按照三角形、 正方形或者六边形网格排列，其中，比较常见的是正方形元胞，分布在离散的欧几里德空间的网格上。
+元胞自动机模型中所有元胞无论在时间还是空间上状态都是离散的，并且在特定的时刻，每个元胞只可能是有限状态的一种。
+邻域Link to heading与元胞相邻的空间，是指以元胞为中心，按一定的规则或形状划分的该元胞的空间集合，是元胞自动机模型中 转换规则基于的要素空间。">
+
+<meta property="og:url" content="//localhost:1313/researches/%E7%BA%A6%E6%9D%9F%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92-%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA/">
+  <meta property="og:site_name" content="RONGHUALI PAGE">
+  <meta property="og:title" content="约束逻辑回归-元胞自动机">
+  <meta property="og:description" content="元胞自动机（CA）Link to heading元胞自动机的基本概念Link to heading元胞自动机（Cellular Automata，CA）是一种在时空和状态上都离散，空间相互作用和时间因果关系皆基于微观的网格动力学模型[63]。
+[63] 黎夏, 叶嘉安. 约束性单元自动演化 CA 模型及可持续城市发展形态的模拟[J]. 地理学报, 1999, (4):3-12.
+元胞自动机**“自下而上”**的研究思路、强大的时空运算的能力及其动态演变的特征为地理学家研究复杂的地理现象提供了新的视角。
+谢一春将元胞自动机过程归纳为结构和运算两个部分[64]。
+[64] Michael Batty, Yichun Xie. Possible urban automata[J]. Environment and Planning B. 1997, 24: 175-192.
+标准的 CA 模型包括：元胞、状态、邻域以及转换规则如（图 3.2）。
+元胞Link to heading元胞是元胞自动机最基本的构成单元，通常是规则的格网单元，一般按照三角形、 正方形或者六边形网格排列，其中，比较常见的是正方形元胞，分布在离散的欧几里德空间的网格上。
+元胞自动机模型中所有元胞无论在时间还是空间上状态都是离散的，并且在特定的时刻，每个元胞只可能是有限状态的一种。
+邻域Link to heading与元胞相邻的空间，是指以元胞为中心，按一定的规则或形状划分的该元胞的空间集合，是元胞自动机模型中 转换规则基于的要素空间。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="researches">
+    <meta property="article:published_time" content="2025-07-25T14:46:08+08:00">
+    <meta property="article:modified_time" content="2025-07-25T14:46:08+08:00">
+    <meta property="article:tag" content="CA">
+
+
+
+
+<link rel="canonical" href="//localhost:1313/researches/%E7%BA%A6%E6%9D%9F%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92-%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+  
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="//localhost:1313/">
+      RONGHUALI PAGE
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/researches/">Research</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/blogs/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="//localhost:1313/researches/%E7%BA%A6%E6%9D%9F%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92-%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA/">
+          约束逻辑回归-元胞自动机
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="元胞自动机ca">
+  元胞自动机（CA）
+  <a class="heading-link" href="#%e5%85%83%e8%83%9e%e8%87%aa%e5%8a%a8%e6%9c%baca">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="元胞自动机的基本概念">
+  元胞自动机的基本概念
+  <a class="heading-link" href="#%e5%85%83%e8%83%9e%e8%87%aa%e5%8a%a8%e6%9c%ba%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>元胞自动机（Cellular Automata，CA）是一种在时空和状态上都离散，空间相互作用和时间因果关系皆基于微观的网格动力学模型[63]。</p>
+<blockquote>
+<p>[63] 黎夏, 叶嘉安. 约束性单元自动演化 CA 模型及可持续城市发展形态的模拟[J]. 地理学报, 1999, (4):3-12.</p></blockquote>
+<p>元胞自动机**“自下而上”**的研究思路、强大的时空运算的能力及其动态演变的特征为地理学家研究复杂的地理现象提供了新的视角。</p>
+<p>谢一春将元胞自动机过程归纳为<strong>结构和运算</strong>两个部分[64]。</p>
+<blockquote>
+<p>[64] Michael Batty, Yichun Xie. Possible urban automata[J]. Environment and Planning B. 1997, 24: 175-192.</p></blockquote>
+<p>标准的 CA 模型包括：元胞、状态、邻域以及转换规则如（图 3.2）。</p>
+<p><img src="./CA.assets/image-20250725145729683.png" alt="image-20250725145729683"></p>
+<h3 id="元胞">
+  元胞
+  <a class="heading-link" href="#%e5%85%83%e8%83%9e">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>元胞</strong>是元胞自动机最基本的构成单元，通常是规则的<strong>格网单元</strong>，一般按照三角形、 正方形或者六边形网格排列，其中，比较常见的是正方形元胞，分布在离散的欧几里德空间的网格上。</p>
+<p>元胞自动机模型中所有元胞无论在时间还是空间上状态都是<strong>离散</strong>的，并且在特定的时刻，每个元胞只可能是<strong>有限状态的一种</strong>。</p>
+<h3 id="邻域">
+  邻域
+  <a class="heading-link" href="#%e9%82%bb%e5%9f%9f">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>与元胞相邻的空间，是指以元胞为中心，按一定的规则或形状划分的该元胞的空间集合，是元胞自动机模型中 转换规则基于的要素空间。</p>
+<h3 id="转换规则">
+  转换规则
+  <a class="heading-link" href="#%e8%bd%ac%e6%8d%a2%e8%a7%84%e5%88%99">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>转换规则为当前时刻元胞及其邻域确立一定的规则来确定下 一时刻该元胞的状态，它是 <strong>CA 模型的核心部分</strong>，具有元胞位置无关性。</p>
+<p>CA 模型并不是由严格定义的函数或动力方程确定，它构成的方式复杂，转换规则变种很多。</p>
+<p>转换规则定义了每个元胞从 t 时刻到 t+1 时刻 的状态转变。</p>
+<p>在地理元胞自动机中，获取转换规则的主要方法有：<strong>多准则判断、Logistic 回归、SLEUTH、主成分分析、神经网络和遗传算法等。</strong></p>
+<h2 id="城市ca模拟模型">
+  城市CA模拟模型
+  <a class="heading-link" href="#%e5%9f%8e%e5%b8%82ca%e6%a8%a1%e6%8b%9f%e6%a8%a1%e5%9e%8b">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>元胞自动机模拟复杂系统从局部到整体时空演化过程的能力同样适用于在模拟和分析具有时间、空间特征的地理复杂系统，因此 CA 模型在城市模拟领域也有较为广泛的应用。</p>
+<p>城市 CA 是通过模型与 GIS 耦合实现的。CA 具备强大的演算能力，同时空间数据结构是规则离散的，易与栅格结构的数据相结合，而遥感和 GIS 等平台能够处理海量的时空动态信息和空间数据，与 CA 模型相耦合可以提高对城市的模拟能力，有助于对城市空间扩展动力机制的推演。</p>
+<p>城市 CA 模型的本质是通过局域的城市用地动态过程来模拟出全域的城市发展动态变化。</p>
+<h3 id="元胞的设定">
+  元胞的设定
+  <a class="heading-link" href="#%e5%85%83%e8%83%9e%e7%9a%84%e8%ae%be%e5%ae%9a">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>在大多数城市 CA 模型的研究中，<strong>元胞被设定为城市用地、非城市用地或者其它土地利用类型等离散状态</strong>。</p>
+<h3 id="领域的设定">
+  领域的设定
+  <a class="heading-link" href="#%e9%a2%86%e5%9f%9f%e7%9a%84%e8%ae%be%e5%ae%9a">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>标准的 CA 主要考虑<strong>邻域</strong>的作用，对标准 CA 的限制条件适当放宽可以更好地模拟出真实城市的发展，如<strong>引入距离变量因子、推演不同城市用地的需求总量</strong>，<strong>增加全局或局域的约束条件以及随机变量</strong>的引入也会影响模拟过程，使城市演变更加真实。</p>
+<h1 id="逻辑回归logistic-regression分析">
+  逻辑回归（Logistic Regression）分析
+  <a class="heading-link" href="#%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92logistic-regression%e5%88%86%e6%9e%90">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p><a href="https://www.runoob.com/ml/ml-logistic-regression.html"  class="external-link" target="_blank" rel="noopener">逻辑回归（Logistic Regression） | 菜鸟教程</a></p>
+<p>逻辑回归（Logistic Regression）是一种广泛应用于分类问题的统计学习方法，尽管名字中带有&quot;回归&quot;，但它实际上是一种用于二分类或多分类问题的算法。</p>
+<p>逻辑回归通过使用逻辑函数（也称为 Sigmoid 函数）将线性回归的输出映射到 0 和 1 之间，从而预测某个事件发生的概率。图 3.3 为 Logistic 回归函数图像。</p>
+<img src="./CA.assets/image-20250725151840400.png" alt="image-20250725151840400" style="zoom:40%;" />
+<h2 id="模型公式">
+  模型公式
+  <a class="heading-link" href="#%e6%a8%a1%e5%9e%8b%e5%85%ac%e5%bc%8f">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>定义 m 个自变量𝑋 , 𝑋 ，…, 𝑋 所对应的 Logistic 回归模型为：
+</p>
+$$
+\text{logit}(P) = \ln\left( \frac{P}{1 - P} \right) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_m X_m
+$$<p>
+其中logit(P)是转化发生概率 P 的自然对数。𝛽 为常数项，𝛽 （i=1,2，… ，𝑚）为各个变量的回归系数。</p>
+<h2 id="模型输出与类别概率的关系">
+  模型输出与类别概率的关系
+  <a class="heading-link" href="#%e6%a8%a1%e5%9e%8b%e8%be%93%e5%87%ba%e4%b8%8e%e7%b1%bb%e5%88%ab%e6%a6%82%e7%8e%87%e7%9a%84%e5%85%b3%e7%b3%bb">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>通过将回归方程的输出设为 logit(P)，从数学上<strong>强制</strong>预测结果必须是一个合法的概率（在 0 和 1 之间）。</p>
+<p>如果直接建一个线性回归模型来拟合概率 P，那模型输出的值可以是：</p>
+<ul>
+<li>小于 0，比如 -0.3 ❌</li>
+<li>大于 1，比如 1.4 ❌</li>
+</ul>
+<p>这些都不是合法的概率值。</p>
+<p>逻辑回归模型不直接拟合 P，而是拟合它的<strong>对数几率 logit(P)</strong>。然后通过反函数（sigmoid函数）把它变回概率：</p>
+$$
+P = \frac{1}{1 + e^{-z}}, \quad \text{其中 } z = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_m X_m
+$$<p>
+无论 $z$  是多大还是多小，<strong>$P$</strong> <strong>永远在 (0, 1)</strong> 区间内。</p>
+<blockquote>
+<p>通过把回归方程的因变量设为 logit(P)，不是直接预测概率，而是预测它的对数几率。然后用 sigmoid 函数将结果「压缩」回 (0, 1)，这就<strong>自动防止了预测值超过 1 或小于 0</strong> 的问题。</p></blockquote>
+<h1 id="约束逻辑回归-ca模型的城市化概率">
+  约束逻辑回归-CA模型的城市化概率
+  <a class="heading-link" href="#%e7%ba%a6%e6%9d%9f%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92-ca%e6%a8%a1%e5%9e%8b%e7%9a%84%e5%9f%8e%e5%b8%82%e5%8c%96%e6%a6%82%e7%8e%87">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>城市三维空间的模拟一般将建筑平面的扩展和建筑高度的增长分开考虑，本文基于<strong>约束 Logistic 回归</strong>的 CA 模型来判断城市<strong>平面</strong>的扩展的适宜性。</p>
+<p>在本文中 CA 元胞被设定为<strong>居住用地和商业与公共服务用地、 工业用地、绿地、水体和空地</strong>。</p>
+<h2 id="逻辑回归-ca模型的城市化概率">
+  逻辑回归-CA模型的城市化概率
+  <a class="heading-link" href="#%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92-ca%e6%a8%a1%e5%9e%8b%e7%9a%84%e5%9f%8e%e5%b8%82%e5%8c%96%e6%a6%82%e7%8e%87">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>城市化是非城市用地向城市用地转化的过程，如果给一个元胞赋二进制状态集合 {0(非城市用地)，1(城市用地)}，如果该元胞状态在下一时刻间是否从 0 变化到 1，就表示该元胞所代表的地块已经城市化。</p>
+<p>假设一个城市区位的发展概率是一系列独立变量所构成的函数，因变量是二项分类常量，即土地利用类型分为非城市用地与城市用地。通过二分 Logistic 回归分析，令因变量 Y 服从二项分布, 其二项分布的取值为 0 或 1，Y=1 的概率为 P。</p>
+<p>城市化的 CA 层概率为：
+</p>
+$$
+p_{i,j}^t(S_{i,j} = \text{urban}) = \frac{\exp(Z_{i,j})}{1 + \exp(Z_{i,j})} = \frac{1}{1 + \exp(-Z_{i,j})}
+$$<p>
+式中, 𝑆  是单元(i,j)的状态，只有 0(非城市化)和 1(城市化)两种状态；$𝑍_{𝑖,j}$  即通过 Logistic 回归得到的logit(P)值。</p>
+<h2 id="约束逻辑回归ca模型的城市化概率">
+  约束逻辑回归CA模型的城市化概率
+  <a class="heading-link" href="#%e7%ba%a6%e6%9d%9f%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92ca%e6%a8%a1%e5%9e%8b%e7%9a%84%e5%9f%8e%e5%b8%82%e5%8c%96%e6%a6%82%e7%8e%87">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>在城市用地扩展的过程中，受自然条件或出于生态环境保护的考虑，<strong>并不是所有的土地类型都能转化为城市用地</strong>，应在模型中设置约束层加以修正。因此，经过约束层修正后 t 时刻元胞(i,j) 城市化的最终发展概率为：
+</p>
+$$
+p_{i,j}^t(S_{i,j} = \text{urban}) = \frac{1}{1 + \exp(-Z_{i,j})} \times \text{con}(S_{i,j}^t) \times \Omega_{i,j}^t \times \gamma
+$$<p>
+式中, con()为约束条件，其值∈[0,1]；Ω 为邻域作用部分，表示 t 时刻元胞(i, j)的 3×3 窗口内的开发率；γ为随机变量，其值大于 1。</p>
+<h2 id="约束逻辑回归-ca模型的组成">
+  约束逻辑回归-CA模型的组成
+  <a class="heading-link" href="#%e7%ba%a6%e6%9d%9f%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92-ca%e6%a8%a1%e5%9e%8b%e7%9a%84%e7%bb%84%e6%88%90">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="土地适宜因子">
+  土地适宜因子
+  <a class="heading-link" href="#%e5%9c%9f%e5%9c%b0%e9%80%82%e5%ae%9c%e5%9b%a0%e5%ad%90">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>约束 Logistic-CA 模型中，逻辑回归公式（1）中 𝑋  是土地适宜性的影响因子，P 是适宜开发的全局概率。</p>
+<p>本文选取<strong>主要河流距离、海岸线影响距离、主要道路影响距离、市中心经济辐射影响距离</strong>作为土地适宜因子。</p>
+<p>全局概率 P 由选取的土地适宜因子和两期土地利用变化数据进行抽样估算，在模型迭代中固定不变。</p>
+<h3 id="邻域作用">
+  邻域作用
+  <a class="heading-link" href="#%e9%82%bb%e5%9f%9f%e4%bd%9c%e7%94%a8">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>根据 Tobler 第一定律，距离越近的地理实体空间相关性越强。通常情况下城市用地适宜性的空间分布也遵循这种规律，这也是城市用地的规模效应和集聚效应。</p>
+<p>若某一地块周围的大部分用地都被开发，而且自身适宜开发，则该地块演化为城市用地的可能性很大。同时，土地利用变化的趋势是趋于紧凑的，也是兼顾了城市用地的形态特征，避免空间布局分散破碎。</p>
+<p>邻域作用部分通过 3×3 的窗口计算城市用地在空间上的互相影响：
+</p>
+$$
+\Omega_{i,j}^t =  \frac{\text{con}(S_{i,j}= \text{urban})}{3+3-1})
+$$<p>
+其中，Ω 是邻域函数，$\text{con}(S_{i,j}= \text{urban})$ 为$S_{i,j}$ 城市用地的条件函数。</p>
+<h3 id="约束条件">
+  约束条件
+  <a class="heading-link" href="#%e7%ba%a6%e6%9d%9f%e6%9d%a1%e4%bb%b6">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>城市用地的转化，除了受地理特征变量影响之外，另外还要受到自然条件的影响如地表坡度和土壤性质等。</p>
+<p>本文在约束模型中考虑了地表坡度限制因素。若元胞位置的坡度大于 25%，则认为它不能转化为城市元胞，记表达式如下：
+</p>
+$$
+p_{\text{constraint}} =
+\begin{cases}
+1, & \text{slope} \leq 25\% \\
+0, & \text{slope} > 25\%
+\end{cases}
+$$<h3 id="随机因素">
+  随机因素
+  <a class="heading-link" href="#%e9%9a%8f%e6%9c%ba%e5%9b%a0%e7%b4%a0">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>真实城市空间的扩展会受到各种不确定因素的影响和干预。为了反映出城市发展所 存在的随机性，需要向模型中加入随机因素的作用。该项可表达为：
+</p>
+$$
+\gamma = 1 + (-\text{lgr})^{\alpha}
+$$<p>
+式中 r 为（0,1）内的随机数，α为扰动强度，取值范围为 1-10 之间的整数。</p>
+<h1 id="参考文献">
+  参考文献
+  <a class="heading-link" href="#%e5%8f%82%e8%80%83%e6%96%87%e7%8c%ae">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>[1]甘喜庆.基于约束logistic-CA模型的城市扩张空间形态研究[D].中南大学,2008.</p>
+<p>[2]刘兴权,吴涛,甘喜庆.基于可控邻域作用CA的城市扩张研究[J].国土资源遥感,2011,(02):110-114.</p>
+<p>[3]陈晨.基于CA/MAS的城市三维空间扩展及动态模拟研究[D].辽宁师范大学,2018.</p>
+
+  </article>
+</section>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     RONGHUA LI 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
