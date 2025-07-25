@@ -8,12 +8,12 @@ defaultcontentlanguage = "en"
 [pagination]
 pagerSize = 20
 
-[services]
-[services.disqus]
-shortname = "yourdiscussshortname"
+# [services]
+# [services.disqus]
+# shortname = "yourdiscussshortname"
 
 [markup.highlight]
-style = "github-dark"
+style = "github-white"
 
 [params]
   author = "RONGHUA LI"
@@ -49,13 +49,18 @@ style = "github-dark"
   icon = "fa-brands fa-github fa-2x"
   weight = 1
   url = "https://github.com/ronghua-li/"
+# 可用的图标来自Font Awesome，支持多种社交平台。
 
 # Menu links
 [[menu.main]]
-  name = "Blog"
+  name = "Research"
   weight = 1
+  url  = "research/"
+[[menu.main]]
+  name = "Blog"
+  weight = 2
   url  = "posts/"
 [[menu.main]]
   name = "About"
-  weight = 2
+  weight = 3
   url = "about/"

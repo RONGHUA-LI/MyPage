@@ -2,34 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/series/blog%E5%85%BB%E6%88%90%E8%AE%B0/</loc>
+    <loc>ronghua.cn/series/blog%E5%85%BB%E6%88%90%E8%AE%B0/</loc>
     <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>ronghua.cn/categories/</loc>
     <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/hugo/</loc>
+    <loc>ronghua.cn/tags/hugo/</loc>
     <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>ronghua.cn/posts/</loc>
     <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>ronghua.cn/research/</loc>
     <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/series/</loc>
+    <loc>ronghua.cn/</loc>
     <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>ronghua.cn/series/</loc>
     <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
+    <loc>ronghua.cn/tags/</loc>
     <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</loc>
+    <loc>ronghua.cn/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/my-first-post/</loc>
-    <lastmod>2025-07-24T20:58:49+08:00</lastmod>
+    <loc>ronghua.cn/posts/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-07-25T10:10:49+08:00</lastmod>
+  </url><url>
+    <loc>ronghua.cn/research/%E7%A0%94%E7%A9%B61/</loc>
+    <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url>
 </urlset>
