@@ -55,11 +55,11 @@ style = "github-white"
 [[menu.main]]
   name = "Research"
   weight = 1
-  url  = "research/"
+  url  = "researches/"
 [[menu.main]]
   name = "Blog"
   weight = 2
-  url  = "posts/"
+  url  = "blogs/"
 [[menu.main]]
   name = "About"
   weight = 3
