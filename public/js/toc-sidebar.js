@@ -1,3 +1,5 @@
+console.log("TOC sidebar script loaded");
+
 function debounce(func, wait, options = {
   immediate: false,
   middle: true,

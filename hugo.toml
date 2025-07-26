@@ -1,4 +1,4 @@
-baseurl = "https://RONGHUA-LI.github.io/MyPage/"
+baseurl = "lironghua.cn/"
 title = "RONGHUALI PAGE"
 theme = "hugo-coder"
 languagecode = "zh-cn"
@@ -39,7 +39,6 @@ style = "github-white"
 
   since = 2025
 
-  toc = true
   math = true  # Enable math support
 
   enableTwemoji = true
