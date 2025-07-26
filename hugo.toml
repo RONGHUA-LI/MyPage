@@ -1,4 +1,4 @@
-baseurl = "ronghua.cn"
+baseurl = "https://RONGHUA-LI.github.io/MyPage/"
 title = "RONGHUALI PAGE"
 theme = "hugo-coder"
 languagecode = "zh-cn"

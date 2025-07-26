@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on RONGHUALI PAGE</title>
-    <link>//localhost:1313/categories/</link>
+    <link>https://RONGHUA-LI.github.io/MyPage/categories/</link>
     <description>Recent content in Categories on RONGHUALI PAGE</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 26 Jul 2025 10:24:23 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://RONGHUA-LI.github.io/MyPage/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>前端技术</title>
-      <link>//localhost:1313/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
+      <link>https://RONGHUA-LI.github.io/MyPage/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Sat, 26 Jul 2025 10:24:23 +0800</pubDate>
-      <guid>//localhost:1313/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</guid>
+      <guid>https://RONGHUA-LI.github.io/MyPage/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>软件使用技巧</title>
-      <link>//localhost:1313/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <link>https://RONGHUA-LI.github.io/MyPage/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Fri, 25 Jul 2025 21:00:05 +0800</pubDate>
-      <guid>//localhost:1313/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <guid>https://RONGHUA-LI.github.io/MyPage/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
       <description></description>
     </item>
     <item>
       <title>科研</title>
-      <link>//localhost:1313/categories/%E7%A7%91%E7%A0%94/</link>
+      <link>https://RONGHUA-LI.github.io/MyPage/categories/%E7%A7%91%E7%A0%94/</link>
       <pubDate>Fri, 25 Jul 2025 14:46:08 +0800</pubDate>
-      <guid>//localhost:1313/categories/%E7%A7%91%E7%A0%94/</guid>
+      <guid>https://RONGHUA-LI.github.io/MyPage/categories/%E7%A7%91%E7%A0%94/</guid>
       <description></description>
     </item>
   </channel>

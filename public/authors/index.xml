@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on RONGHUALI PAGE</title>
-    <link>//localhost:1313/authors/</link>
+    <link>https://RONGHUA-LI.github.io/MyPage/authors/</link>
     <description>Recent content in Authors on RONGHUALI PAGE</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 26 Jul 2025 10:24:23 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://RONGHUA-LI.github.io/MyPage/authors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RONGHUA LI</title>
-      <link>//localhost:1313/authors/ronghua-li/</link>
+      <link>https://RONGHUA-LI.github.io/MyPage/authors/ronghua-li/</link>
       <pubDate>Sat, 26 Jul 2025 10:24:23 +0800</pubDate>
-      <guid>//localhost:1313/authors/ronghua-li/</guid>
+      <guid>https://RONGHUA-LI.github.io/MyPage/authors/ronghua-li/</guid>
       <description></description>
     </item>
   </channel>
