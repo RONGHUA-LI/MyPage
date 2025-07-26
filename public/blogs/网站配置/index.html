@@ -494,6 +494,16 @@ themes\hugo-coder\layouts\partials\extend-head.html
 </span></span></code></pre></div><p>如果想要更改显示的图标的尺寸的话可以根据<em>luizdepra</em>的建议去更改<code>/hugo-coder/layouts/partials/head/custom-icons.html</code>的内容。</p>
 <blockquote>
 <p>由于浏览器缓存问题，可能需要强制刷新才能正常显示！！！</p></blockquote>
+<h1 id="修改字体">
+  修改字体
+  <a class="heading-link" href="#%e4%bf%ae%e6%94%b9%e5%ad%97%e4%bd%93">
+    <i class="fa-solid fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
+  </a>
+</h1>
+<p>修改/新建 <code>themes/coder/assets/scss/_variables.scss</code>，添加你想要的 <code>$body-font-family</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$font-family: &#34;Noto Sans SC&#34;, &#34;PingFang SC&#34;, &#34;Microsoft YaHei&#34;, &#34;Helvetica Neue&#34;, sans-serif;
+</span></span></code></pre></div><p>字体应该立即生效</p>
 
   </article>
 </section>
@@ -530,7 +540,6 @@ themes\hugo-coder\layouts\partials\extend-head.html
     
   </section>
 </footer>
-
 
 
 <script src="/js/toc-sidebar.js"></script>
