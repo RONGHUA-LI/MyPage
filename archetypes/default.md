@@ -1,6 +1,12 @@
-+++ 
++++
 draft = true
 date = {{ .Date }}
-title = ""
-slug = "" 
+title = "{{ replace .Name "-" " " | title }}"
+description = ""
+authors = []
+tags = []
+categories = []
+externalLink = ""
+series = []
+
 +++

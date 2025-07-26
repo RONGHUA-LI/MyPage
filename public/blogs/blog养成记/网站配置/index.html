@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <title>
+  网站配置 · RONGHUALI PAGE
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="RONGHUA LI">
+<meta name="description" content="
+  支持Markdown公式显示
+  
+    
+    Link to heading
+  
+
+参考 ：Hugo&#43;Mathjax的正确姿势
+themes\hugo-coder\layouts\partials\extend-head.html
+{{ if or .Params.math .Site.Params.math }}
+&lt;script&gt;
+  MathJax = {
+    tex: {
+      inlineMath: [[&#39;\\(&#39;, &#39;\\)&#39;]],
+      displayMath: [[&#39;$$&#39;,&#39;$$&#39;]],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;]
+    }
+  };
+&lt;/script&gt;
+&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+{{ end }} 
+在 \themes\hugo-coder\layouts\_default\baseof.html 文件 &lt;head&gt; 标签中，增加一个 extend-head.html 的引入。
+{{ partial &#34;extend-head.html&#34; . }}
+修改hugo.toml文件，增加math参数，并开启mathjax。
+# Site parameters
+[params]
+  #  other params
+  math = true  # Enable math support
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # This allows HTML in markdown
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [[&#39;\[&#39;, &#39;\]&#39;], [&#39;$$&#39;, &#39;$$&#39;]]
+          inline = [[&#39;\(&#39;, &#39;\)&#39;], [&#39;$&#39;, &#39;$&#39;]]
+
+当然，这个math = true/false，可以全站设定，也可以在单个页面中的头部设置。">
+<meta name="keywords" content="blog,study,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="网站配置">
+  <meta name="twitter:description" content="支持Markdown公式显示Link to heading参考 ：Hugo&#43;Mathjax的正确姿势
+themes\hugo-coder\layouts\partials\extend-head.html
+{{ if or .Params.math .Site.Params.math }} &lt;script&gt; MathJax = { tex: { inlineMath: [[&#39;\\(&#39;, &#39;\\)&#39;]], displayMath: [[&#39;$$&#39;,&#39;$$&#39;]], processEscapes: true, processEnvironments: true }, options: { skipHtmlTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } }; &lt;/script&gt; &lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt; &lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt; {{ end }} 在 \themes\hugo-coder\layouts\_default\baseof.html 文件 &lt;head&gt; 标签中，增加一个 extend-head.html 的引入。
+{{ partial &#34;extend-head.html&#34; . }} 修改hugo.toml文件，增加math参数，并开启mathjax。
+# Site parameters [params] # other params math = true # Enable math support [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true # This allows HTML in markdown [markup.goldmark.extensions] [markup.goldmark.extensions.passthrough] enable = true [markup.goldmark.extensions.passthrough.delimiters] block = [[&#39;\[&#39;, &#39;\]&#39;], [&#39;$$&#39;, &#39;$$&#39;]] inline = [[&#39;\(&#39;, &#39;\)&#39;], [&#39;$&#39;, &#39;$&#39;]] 当然，这个math = true/false，可以全站设定，也可以在单个页面中的头部设置。">
+
+<meta property="og:url" content="lironghua.cn/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/">
+  <meta property="og:site_name" content="RONGHUALI PAGE">
+  <meta property="og:title" content="网站配置">
+  <meta property="og:description" content="支持Markdown公式显示Link to heading参考 ：Hugo&#43;Mathjax的正确姿势
+themes\hugo-coder\layouts\partials\extend-head.html
+{{ if or .Params.math .Site.Params.math }} &lt;script&gt; MathJax = { tex: { inlineMath: [[&#39;\\(&#39;, &#39;\\)&#39;]], displayMath: [[&#39;$$&#39;,&#39;$$&#39;]], processEscapes: true, processEnvironments: true }, options: { skipHtmlTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } }; &lt;/script&gt; &lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt; &lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt; {{ end }} 在 \themes\hugo-coder\layouts\_default\baseof.html 文件 &lt;head&gt; 标签中，增加一个 extend-head.html 的引入。
+{{ partial &#34;extend-head.html&#34; . }} 修改hugo.toml文件，增加math参数，并开启mathjax。
+# Site parameters [params] # other params math = true # Enable math support [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true # This allows HTML in markdown [markup.goldmark.extensions] [markup.goldmark.extensions.passthrough] enable = true [markup.goldmark.extensions.passthrough.delimiters] block = [[&#39;\[&#39;, &#39;\]&#39;], [&#39;$$&#39;, &#39;$$&#39;]] inline = [[&#39;\(&#39;, &#39;\)&#39;], [&#39;$&#39;, &#39;$&#39;]] 当然，这个math = true/false，可以全站设定，也可以在单个页面中的头部设置。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2025-07-26T10:24:23+08:00">
+    <meta property="article:modified_time" content="2025-07-26T10:24:23+08:00">
+    <meta property="article:tag" content="Hugo">
+      <meta property="og:see_also" content="lironghua.cn/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/hugo-archetypes-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E6%9D%BF/">
+      <meta property="og:see_also" content="lironghua.cn/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/">
+
+
+
+
+<link rel="canonical" href="lironghua.cn/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="lironghua.cn/css/coder.min.945afc4d901aaa20aa9cf5ac64801770770d882858c4d3c64c029d7e369d6f65.css" integrity="sha256-lFr8TZAaqiCqnPWsZIAXcHcNiChYxNPGTAKdfjadb2U=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="lironghua.cn/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+  
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="lironghua.cn/">
+      RONGHUALI PAGE
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/lironghua.cn/researches/">Research</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/lironghua.cn/blogs/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/lironghua.cn/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="lironghua.cn/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/">
+          网站配置
+        </a>
+      </h1>
+    </header>
+
+    <h1 id="支持markdown公式显示">
+  支持Markdown公式显示
+  <a class="heading-link" href="#%e6%94%af%e6%8c%81markdown%e5%85%ac%e5%bc%8f%e6%98%be%e7%a4%ba">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>参考 ：<a href="https://www.windtunnel.cn/posts/hugo/hugo-mathjax/#hugo%e6%94%af%e6%8c%81%e6%95%b0%e5%ad%a6%e7%9a%84%e6%ad%a3%e7%a1%ae%e6%96%b9%e5%bc%8f"  class="external-link" target="_blank" rel="noopener">Hugo+Mathjax的正确姿势</a></p>
+<p><code>themes\hugo-coder\layouts\partials\extend-head.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if or .Params.math .Site.Params.math }}
+</span></span><span style="display:flex;"><span>&lt;<span style="font-weight:bold">script</span>&gt;
+</span></span><span style="display:flex;"><span>  MathJax = {
+</span></span><span style="display:flex;"><span>    tex: {
+</span></span><span style="display:flex;"><span>      inlineMath: [[<span style="color:#0ff;font-weight:bold">&#39;\\(&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;\\)&#39;</span>]],
+</span></span><span style="display:flex;"><span>      displayMath: [[<span style="color:#0ff;font-weight:bold">&#39;$$&#39;</span>,<span style="color:#0ff;font-weight:bold">&#39;$$&#39;</span>]],
+</span></span><span style="display:flex;"><span>      processEscapes: <span style="color:#fff;font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>      processEnvironments: <span style="color:#fff;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    options: {
+</span></span><span style="display:flex;"><span>      skipHtmlTags: [<span style="color:#0ff;font-weight:bold">&#39;script&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;noscript&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;style&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;textarea&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;pre&#39;</span>]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>&lt;/<span style="font-weight:bold">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="font-weight:bold">script</span> <span style="color:#007f7f">src</span>=<span style="color:#0ff;font-weight:bold">&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;</span>&gt;&lt;/<span style="font-weight:bold">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="font-weight:bold">script</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#34;MathJax-script&#34;</span> <span style="color:#007f7f">async</span> <span style="color:#007f7f">src</span>=<span style="color:#0ff;font-weight:bold">&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;</span>&gt;&lt;/<span style="font-weight:bold">script</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }} 
+</span></span></code></pre></div><p>在 <code>\themes\hugo-coder\layouts\_default\baseof.html</code> 文件 <code>&lt;head&gt;</code> 标签中，增加一个 <code>extend-head.html</code> 的引入。</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ partial &#34;extend-head.html&#34; . }}
+</span></span></code></pre></div><p>修改<code>hugo.toml</code>文件，增加<code>math</code>参数，并开启<code>mathjax</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#007f7f"># Site parameters</span>
+</span></span><span style="display:flex;"><span>[params]
+</span></span><span style="display:flex;"><span>  <span style="color:#007f7f">#  other params</span>
+</span></span><span style="display:flex;"><span>  math = <span style="color:#fff;font-weight:bold">true</span>  <span style="color:#007f7f"># Enable math support</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[markup]
+</span></span><span style="display:flex;"><span>  [markup.goldmark]
+</span></span><span style="display:flex;"><span>    [markup.goldmark.renderer]
+</span></span><span style="display:flex;"><span>      unsafe = <span style="color:#fff;font-weight:bold">true</span>  
+</span></span><span style="display:flex;"><span>[markup]
+</span></span><span style="display:flex;"><span>  [markup.goldmark]
+</span></span><span style="display:flex;"><span>    [markup.goldmark.renderer]
+</span></span><span style="display:flex;"><span>      unsafe = <span style="color:#fff;font-weight:bold">true</span>  <span style="color:#007f7f"># This allows HTML in markdown</span>
+</span></span><span style="display:flex;"><span>    [markup.goldmark.extensions]
+</span></span><span style="display:flex;"><span>      [markup.goldmark.extensions.passthrough]
+</span></span><span style="display:flex;"><span>        enable = <span style="color:#fff;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>        [markup.goldmark.extensions.passthrough.delimiters]
+</span></span><span style="display:flex;"><span>          block = [[<span style="color:#0ff;font-weight:bold">&#39;\[&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;\]&#39;</span>], [<span style="color:#0ff;font-weight:bold">&#39;$$&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;$$&#39;</span>]]
+</span></span><span style="display:flex;"><span>          inline = [[<span style="color:#0ff;font-weight:bold">&#39;\(&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;\)&#39;</span>], [<span style="color:#0ff;font-weight:bold">&#39;$&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;$&#39;</span>]]
+</span></span></code></pre></div><blockquote>
+<p>当然，这个math = true/false，可以全站设定，也可以在单个页面中的头部设置。</p></blockquote>
+<p>这里有两个部分，一个部分就是要打开<code>math</code>参数，另一个部分是打开<code>unsafe</code>参数。</p>
+<p>有第二个参数，才会允许MathJax处理HTML标签。</p>
+<p>定义行间公式时，<code>$$</code>、<code>\[</code>和<code>\]</code>的前后要留一个空行，不然hugo会忽略任何跟行间公式相连（只有一个换行）的文字。</p>
+<h1 id="侧边导航栏">
+  侧边导航栏
+  <a class="heading-link" href="#%e4%be%a7%e8%be%b9%e5%af%bc%e8%88%aa%e6%a0%8f">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>参考：<a href="https://tsuidison.github.io/zh-cn/posts/hugo/%e5%a2%9e%e5%8a%a0%e4%be%a7%e6%a0%8f%e8%b7%9f%e9%9a%8f%e6%bb%9a%e5%8a%a8%e7%9b%ae%e5%bd%95/#%e5%89%8d%e8%a8%80"  class="external-link" target="_blank" rel="noopener">增加侧栏跟随滚动目录 · TsuiDison</a></p>
+<p>将下面的代码保存在<code>/static/js/</code>目录下，命名为<code>toc-sidebar.js</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">function</span> debounce(func, wait, options = {
+</span></span><span style="display:flex;"><span>  immediate: <span style="color:#fff;font-weight:bold">false</span>,
+</span></span><span style="display:flex;"><span>  middle: <span style="color:#fff;font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>  thisArg: <span style="color:#fff;font-weight:bold">null</span>,
+</span></span><span style="display:flex;"><span>}) {
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">let</span> timer;
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">let</span> restDate = <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">Date</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> immediate = options.immediate !== <span style="color:#fff;font-weight:bold">false</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> middle = options.middle !== <span style="color:#fff;font-weight:bold">false</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> thisArg = options.thisArg || <span style="color:#fff;font-weight:bold">null</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">function</span> (...args) {
+</span></span><span style="display:flex;"><span>    timer &amp;&amp; clearTimeout(timer);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">let</span> isFirst = !timer;
+</span></span><span style="display:flex;"><span>    timer = setTimeout(() =&gt; {
+</span></span><span style="display:flex;"><span>      func.apply(thisArg, args);
+</span></span><span style="display:flex;"><span>      restDate = <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">Date</span>();
+</span></span><span style="display:flex;"><span>    }, wait);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">if</span> ((<span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">Date</span>() - restDate &gt; wait &amp;&amp; middle) || (isFirst &amp;&amp; immediate)) {
+</span></span><span style="display:flex;"><span>      clearTimeout(timer);
+</span></span><span style="display:flex;"><span>      func.apply(thisArg, args);
+</span></span><span style="display:flex;"><span>      restDate = <span style="color:#fff;font-weight:bold">new</span> <span style="color:#fff;font-weight:bold">Date</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">function</span> setActive(anchors) {
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> ele = anchors.find((ele, index, arr) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">return</span> ele.getBoundingClientRect().top &gt;= <span style="color:#ff0;font-weight:bold">0</span> || index &gt;= arr.length - <span style="color:#ff0;font-weight:bold">1</span>;
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">if</span> (ele) {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">const</span> tableOfContents = <span style="color:#fff;font-weight:bold">document</span>.querySelector(<span style="color:#0ff;font-weight:bold">&#39;#table-of-contents&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">const</span> toActive = tableOfContents.querySelector(<span style="color:#0ff;font-weight:bold">`a[href=&#34;#</span><span style="color:#0ff;font-weight:bold">${</span>ele.id<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">&#34;]`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">if</span> (!toActive) <span style="color:#fff;font-weight:bold">return</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">const</span> activeA = tableOfContents.querySelector(<span style="color:#0ff;font-weight:bold">`.active`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">if</span> (activeA) activeA.classList.remove(<span style="color:#0ff;font-weight:bold">&#39;active&#39;</span>);
+</span></span><span style="display:flex;"><span>    toActive.classList.add(<span style="color:#0ff;font-weight:bold">&#39;active&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">window</span>.history.pushState(<span style="color:#fff;font-weight:bold">null</span>, <span style="color:#fff;font-weight:bold">null</span>, <span style="color:#0ff;font-weight:bold">`#</span><span style="color:#0ff;font-weight:bold">${</span>ele.id<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">`</span>);
+</span></span><span style="display:flex;"><span>    tableOfContents.scrollTo({
+</span></span><span style="display:flex;"><span>      left: <span style="color:#ff0;font-weight:bold">0</span>,
+</span></span><span style="display:flex;"><span>      top: toActive.offsetTop - tableOfContents.getBoundingClientRect().height / <span style="color:#ff0;font-weight:bold">2</span>,
+</span></span><span style="display:flex;"><span>      behavior: <span style="color:#0ff;font-weight:bold">&#39;smooth&#39;</span>,
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">function</span> initContents(icon = <span style="color:#0ff;font-weight:bold">&#39;&lt;svg t=&#34;1690868184633&#34; class=&#34;icon&#34; viewBox=&#34;0 0 1024 1024&#34; version=&#34;1.1&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; p-id=&#34;3381&#34; width=&#34;32&#34; height=&#34;32&#34;&gt;&lt;path d=&#34;M128 192l768 0 0 128-768 0 0-128Z&#34; fill=&#34;#666666&#34; p-id=&#34;3382&#34;&gt;&lt;/path&gt;&lt;path d=&#34;M128 448l768 0 0 128-768 0 0-128Z&#34; fill=&#34;#666666&#34; p-id=&#34;3383&#34;&gt;&lt;/path&gt;&lt;path d=&#34;M128 704l768 0 0 128-768 0 0-128Z&#34; fill=&#34;#666666&#34; p-id=&#34;3384&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#39;</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">if</span>(<span style="color:#fff;font-weight:bold">document</span>.querySelector(<span style="color:#0ff;font-weight:bold">&#39;#table-of-contents-wapper&#39;</span>)) <span style="color:#fff;font-weight:bold">return</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> contents = <span style="color:#fff;font-weight:bold">document</span>.createElement(<span style="color:#0ff;font-weight:bold">&#39;details&#39;</span>);
+</span></span><span style="display:flex;"><span>  contents.id = <span style="color:#0ff;font-weight:bold">&#39;table-of-contents-wapper&#39;</span>;
+</span></span><span style="display:flex;"><span>  contents.innerHTML = <span style="color:#0ff;font-weight:bold">`&lt;summary&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    </span><span style="color:#0ff;font-weight:bold">${</span>icon<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  &lt;/summary&gt;`</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> styleElement = <span style="color:#fff;font-weight:bold">document</span>.createElement(<span style="color:#0ff;font-weight:bold">&#39;style&#39;</span>)
+</span></span><span style="display:flex;"><span>  styleElement.innerHTML = <span style="color:#0ff;font-weight:bold">`#table-of-contents-wapper {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    user-select: none;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    position: fixed;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    right: 1em;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    top: 4em;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    border-radius: 8px;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    z-index: 999
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  @media only screen and (min-width:768px) {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    #table-of-contents-wapper[open] summary {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">      position: relative;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">      left: 5.8em
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    /* 让文章内容靠左 */
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">      .content {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">        margin-right: 22rem; /* 给右侧预留足够空间 */
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">        max-width: calc(100% - 25rem);
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">      }
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  @media only screen and (max-width:768px) {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    #table-of-contents-wapper {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">      top: auto;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">      right: auto;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">      bottom: 1.8rem;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">      left: 1.8rem
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  #table-of-contents-wapper summary {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    display: inline-block;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    font-size: 1.5em;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    border-radius: 4px;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    cursor: pointer;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    padding: .2em
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  #table-of-contents-wapper #table-of-contents {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    line-height: 2; /* 增加行高改善可读性 */
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    width: 30rem; /* 宽度 */
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    font-size: 1.5rem; /* 字号大小 */
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    padding: 1em;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    border: 0px solid;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    border-radius: 6px;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    overflow-y: scroll;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    max-height: calc(100vh - 20rem);
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    color: currentColor
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  #table-of-contents-wapper #table-of-contents a {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    width: 100%;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    display: inline-block;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    color: currentColor;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    line-height: 1; /* 增加行高 */
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    white-space: nowrap;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    overflow: hidden;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    text-overflow: ellipsis;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    padding: 0.15em; /* 增加上下内边距，让链接更易点击 */
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  #table-of-contents-wapper #table-of-contents .active {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    border-left: 2px solid #42a5f5;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    color: #42a5f5
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  .content h1,
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  .content h2,
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  .content h3 {
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    padding-top: 2em !important;
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">    margin-top: -2em !important
+</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold">  }`</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> anchors = [...<span style="color:#fff;font-weight:bold">document</span>.querySelector(<span style="color:#0ff;font-weight:bold">&#39;.content&#39;</span>).querySelectorAll(<span style="color:#0ff;font-weight:bold">&#39;h1[id],h2[id],h3[id],h4[id]&#39;</span>)];
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">if</span> (!anchors.length) <span style="color:#fff;font-weight:bold">return</span> contents.remove();
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> tableOfContents = <span style="color:#fff;font-weight:bold">document</span>.createElement(<span style="color:#0ff;font-weight:bold">&#39;div&#39;</span>);
+</span></span><span style="display:flex;"><span>  tableOfContents.id = <span style="color:#0ff;font-weight:bold">&#39;table-of-contents&#39;</span>;
+</span></span><span style="display:flex;"><span>  anchors.forEach(ele =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">const</span> a = <span style="color:#fff;font-weight:bold">document</span>.createElement(<span style="color:#0ff;font-weight:bold">&#39;a&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">if</span> (!ele.innerText) <span style="color:#fff;font-weight:bold">return</span>;
+</span></span><span style="display:flex;"><span>    a.innerText = ele.innerText;
+</span></span><span style="display:flex;"><span>    a.href = <span style="color:#0ff;font-weight:bold">`#</span><span style="color:#0ff;font-weight:bold">${</span>ele.id<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">`</span>;
+</span></span><span style="display:flex;"><span>    a.style.paddingLeft = <span style="color:#0ff;font-weight:bold">`</span><span style="color:#0ff;font-weight:bold">${</span>ele.tagName.charAt(<span style="color:#ff0;font-weight:bold">1</span>)<span style="color:#0ff;font-weight:bold">}</span><span style="color:#0ff;font-weight:bold">em`</span>;
+</span></span><span style="display:flex;"><span>    tableOfContents.appendChild(a);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  contents.appendChild(tableOfContents);
+</span></span><span style="display:flex;"><span>  contents.open = <span style="color:#fff;font-weight:bold">window</span>.innerWidth &gt;= <span style="color:#ff0;font-weight:bold">768</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">document</span>.head.appendChild(styleElement);
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">document</span>.body.append(contents);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  setActive(anchors);
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">const</span> debounceSetActive = debounce(setActive, <span style="color:#ff0;font-weight:bold">200</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">window</span>.addEventListener(<span style="color:#0ff;font-weight:bold">&#39;scroll&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    debounceSetActive(anchors);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>修改footer.htm</strong></p>
+<p>对于<code>/layouts/partials/footer.html</code>文件，添加如下代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#007f7f">&lt;!-- 用于增加侧栏 --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="font-weight:bold">script</span> <span style="color:#007f7f">src</span>=<span style="color:#0ff;font-weight:bold">&#34;/js/toc-sidebar.js&#34;</span>&gt;&lt;/<span style="font-weight:bold">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="font-weight:bold">script</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#fff;font-weight:bold">window</span>.addEventListener(<span style="color:#0ff;font-weight:bold">&#39;DOMContentLoaded&#39;</span>, <span style="color:#fff;font-weight:bold">function</span>() {
+</span></span><span style="display:flex;"><span>    initContents();
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>&lt;/<span style="font-weight:bold">script</span>&gt;
+</span></span></code></pre></div><h1 id="修改网站icon">
+  修改网站Icon
+  <a class="heading-link" href="#%e4%bf%ae%e6%94%b9%e7%bd%91%e7%ab%99icon">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>参考：<a href="https://tsuidison.github.io/zh-cn/posts/hugo/%e6%9b%b4%e6%94%b9favicon/#%e6%9b%bf%e6%8d%a2icon"  class="external-link" target="_blank" rel="noopener">更改favicon · TsuiDison</a></p>
+<h2 id="生成icon">
+  <strong>生成icon</strong>
+  <a class="heading-link" href="#%e7%94%9f%e6%88%90icon">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>生成icon的两个网站：</p>
+<ul>
+<li><a href="https://realfavicongenerator.net/"  class="external-link" target="_blank" rel="noopener">Realfavicongenerator</a></li>
+<li><a href="https://www.ico51.cn/"  class="external-link" target="_blank" rel="noopener">ico51</a></li>
+</ul>
+<p>对于每一种模版可能需要生成不同样式的icon，对于coder模版，需要以下的icon</p>
+<ul>
+<li>apple-touch-icon.png</li>
+<li>favicon-16x16.png</li>
+<li>favicon-32x32.png</li>
+<li>favicon.svg</li>
+</ul>
+<blockquote>
+<p>其中，apple-touch-icon.png和favicon.svg可能需要用<a href="https://realfavicongenerator.net/"  class="external-link" target="_blank" rel="noopener">Realfavicongenerator</a>生成，其他的可以用<a href="https://www.ico51.cn/"  class="external-link" target="_blank" rel="noopener">ico51</a>生成。</p></blockquote>
+<h2 id="替换icon">
+  替换icon
+  <a class="heading-link" href="#%e6%9b%bf%e6%8d%a2icon">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>将生成的icon放到<code>/static/images</code>文件夹。</p>
+<p>修改<code>hugo.toml</code>文件中icon的相关路径。</p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>  faviconSVG = <span style="color:#0ff;font-weight:bold">&#34;/images/favicon.svg&#34;</span>
+</span></span><span style="display:flex;"><span>  favicon_32 = <span style="color:#0ff;font-weight:bold">&#34;/images/favicon-32x32.png&#34;</span>
+</span></span><span style="display:flex;"><span>  favicon_16 = <span style="color:#0ff;font-weight:bold">&#34;/images/favicon-16x16.png&#34;</span>
+</span></span></code></pre></div><p>如果想要更改显示的图标的尺寸的话可以根据<em>luizdepra</em>的建议去更改<code>/hugo-coder/layouts/partials/head/custom-icons.html</code>的内容。</p>
+<blockquote>
+<p>由于浏览器缓存问题，可能需要强制刷新才能正常显示！！！</p></blockquote>
+<h1 id="修改字体">
+  修改字体
+  <a class="heading-link" href="#%e4%bf%ae%e6%94%b9%e5%ad%97%e4%bd%93">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>修改/新建 <code>themes/coder/assets/scss/_variables.scss</code>，添加你想要的 <code>$body-font-family</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$font-family: &#34;Noto Sans SC&#34;, &#34;PingFang SC&#34;, &#34;Microsoft YaHei&#34;, &#34;Helvetica Neue&#34;, sans-serif;
+</span></span></code></pre></div><p>字体应该立即生效</p>
+
+  </article>
+</section>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     RONGHUA LI 
+    ·
+    
+     <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+
+<script src="/js/toc-sidebar.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    initContents();
+  });
+</script>
+  </main>
+
+  
+
+  
+  
+  <script src="lironghua.cn/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
