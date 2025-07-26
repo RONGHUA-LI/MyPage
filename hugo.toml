@@ -39,7 +39,7 @@ style = "github-white"
 
   since = 2025
 
-
+  toc = true
   math = true  # Enable math support
 
   enableTwemoji = true
