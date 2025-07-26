@@ -1,6 +1,5 @@
 baseurl = "lironghua.cn/"
 title = "RONGHUALI PAGE"
-theme = "hugo-coder"
 languagecode = "zh-cn"
 defaultcontentlanguage = "zh-cn"
 
