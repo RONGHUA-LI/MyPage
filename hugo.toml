@@ -1,8 +1,8 @@
 baseurl = "ronghua.cn"
 title = "RONGHUALI PAGE"
 theme = "hugo-coder"
-languagecode = "en"
-defaultcontentlanguage = "en"
+languagecode = "zh-cn"
+defaultcontentlanguage = "zh-cn"
 
 
 [pagination]
@@ -12,12 +12,7 @@ pagerSize = 20
 # [services.disqus]
 # shortname = "yourdiscussshortname"
 
-
 [markup]
-  [markup.tableOfContents]
-    endLevel = 2
-    startLevel = 2
-    ordered = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true  # This allows HTML in markdown
@@ -36,11 +31,11 @@ style = "github-white"
   info = "Study Records"
   description = "RONGHUA LI's personal website"
   keywords = "blog,study,personal"
-  avatarurl = "images/avatar.jpg"
+  avatarurl = "/images/avatar.jpg"
 
-  faviconSVG = "/img/favicon.svg"
-  favicon_32 = "/img/favicon-32x32.png"
-  favicon_16 = "/img/favicon-16x16.png"
+  faviconSVG = "/images/favicon.svg"
+  favicon_32 = "/images/favicon-32x32.png"
+  favicon_16 = "/images/favicon-16x16.png"
 
   since = 2025
 
@@ -60,7 +55,7 @@ style = "github-white"
   category = "categories"
   series = "series"
   tag = "tags"
-  # author = "authors"
+  author = "authors"
 
 # Social links
 [[params.social]]
