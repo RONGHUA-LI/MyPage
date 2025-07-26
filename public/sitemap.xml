@@ -2,67 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/authors/</loc>
+    <loc>lironghua.cn/authors/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/</loc>
+    <loc>lironghua.cn/blogs/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/series/blog%E5%85%BB%E6%88%90%E8%AE%B0/</loc>
+    <loc>lironghua.cn/series/blog%E5%85%BB%E6%88%90%E8%AE%B0/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>lironghua.cn/categories/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/hugo/</loc>
+    <loc>lironghua.cn/tags/hugo/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/authors/ronghua-li/</loc>
+    <loc>lironghua.cn/authors/ronghua-li/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>lironghua.cn/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/series/</loc>
+    <loc>lironghua.cn/series/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>lironghua.cn/tags/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
+    <loc>lironghua.cn/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/</loc>
+    <loc>lironghua.cn/blogs/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2025-07-26T10:24:23+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/markdown/</loc>
+    <loc>lironghua.cn/tags/markdown/</loc>
     <lastmod>2025-07-25T21:00:05+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/markdown%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <loc>lironghua.cn/blogs/markdown%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2025-07-25T21:00:05+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <loc>lironghua.cn/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2025-07-25T21:00:05+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/series/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/</loc>
+    <loc>lironghua.cn/series/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/</loc>
     <lastmod>2025-07-25T21:00:05+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/ca/</loc>
+    <loc>lironghua.cn/tags/ca/</loc>
     <lastmod>2025-07-25T14:46:08+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/researches/</loc>
+    <loc>lironghua.cn/researches/</loc>
     <lastmod>2025-07-25T14:46:08+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/series/%E5%9F%8E%E5%B8%82%E6%89%A9%E5%BC%A0%E6%A8%A1%E6%8B%9F/</loc>
+    <loc>lironghua.cn/series/%E5%9F%8E%E5%B8%82%E6%89%A9%E5%BC%A0%E6%A8%A1%E6%8B%9F/</loc>
     <lastmod>2025-07-25T14:46:08+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/%E7%A7%91%E7%A0%94/</loc>
+    <loc>lironghua.cn/categories/%E7%A7%91%E7%A0%94/</loc>
     <lastmod>2025-07-25T14:46:08+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/researches/%E7%BA%A6%E6%9D%9F%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92-%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA/</loc>
+    <loc>lironghua.cn/researches/%E7%BA%A6%E6%9D%9F%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92-%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA/</loc>
     <lastmod>2025-07-25T14:46:08+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</loc>
+    <loc>lironghua.cn/blogs/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2025-07-25T10:10:49+08:00</lastmod>
   </url>
 </urlset>
