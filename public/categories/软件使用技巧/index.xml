@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>软件使用技巧 on RONGHUALI PAGE</title>
-    <link>lironghua.cn/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+    <link>//localhost:1313/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
     <description>Recent content in 软件使用技巧 on RONGHUALI PAGE</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 25 Jul 2025 21:00:05 +0800</lastBuildDate>
-    <atom:link href="lironghua.cn/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown常用快捷键</title>
-      <link>lironghua.cn/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/markdown%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <link>//localhost:1313/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/markdown%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Fri, 25 Jul 2025 21:00:05 +0800</pubDate>
-      <guid>lironghua.cn/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/markdown%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <guid>//localhost:1313/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/markdown%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
       <description>&lt;p&gt;‘```&amp;rsquo;：代码块&lt;/p&gt;&#xA;&lt;p&gt;&amp;lsquo;&amp;gt;&amp;rsquo;：区块&lt;/p&gt;&#xA;&lt;p&gt;ctrl + shift + M：插入公式&lt;/p&gt;</description>
     </item>
   </channel>

@@ -3,7 +3,7 @@
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
-  Hugo Archetypes 原型模板 · RONGHUALI PAGE
+  Hugo · RONGHUALI PAGE
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
     Link to heading
   
 
-原型（Archetypes） 是项目的原型目录内的内容模板文件，这些模板包含预定义的前言设定， 同时也可以是内容配置目录。
+原型 是项目的原型目录内的内容模板文件，这些模板包含预定义的前言设定， 同时也可以是内容配置目录。
 在使用 hugo new命令创建新内容时，会寻找项目中最合适的原型模板。如果项目中不包含任何原型文件，命令也会查找theme主题目录中原型文件。
 hugo new posts/my-first-post.md
 上面命令创建了一个新的内容文件在content/posts/my-first-post.md，创建中使用了下面原型模板中的第一个：
@@ -51,6 +51,7 @@ title = &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
 authors = [&#34;&#34;]
 tags = [&#34;&#34;]
 categories = [&#34;&#34;]
+externalLink = &#34;&#34;
 series = [&#34;&#34;]
 hugo new --kind /blogs/Blog养成记 content/blogs/Blog养成记/&#34;Hugo Archetypes 原型模板&#34;
 基于上面模板目录，这个命令 会在/content/blogs/Blog养成记/&quot;Hugo Archetypes 原型模板&quot;目录创建同/blogs/Blog养成记 原型目录相同结构的文件集合。">
@@ -59,23 +60,23 @@ hugo new --kind /blogs/Blog养成记 content/blogs/Blog养成记/&#34;Hugo Arche
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Hugo Archetypes 原型模板">
-  <meta name="twitter:description" content="原型是什么?Link to heading原型（Archetypes） 是项目的原型目录内的内容模板文件，这些模板包含预定义的前言设定， 同时也可以是内容配置目录。
+  <meta name="twitter:title" content="Hugo">
+  <meta name="twitter:description" content="原型是什么?Link to heading原型 是项目的原型目录内的内容模板文件，这些模板包含预定义的前言设定， 同时也可以是内容配置目录。
 在使用 hugo new命令创建新内容时，会寻找项目中最合适的原型模板。如果项目中不包含任何原型文件，命令也会查找theme主题目录中原型文件。
 hugo new posts/my-first-post.md 上面命令创建了一个新的内容文件在content/posts/my-first-post.md，创建中使用了下面原型模板中的第一个：
 archetypes/posts.md archetypes/default.md themes/my-theme/archetypes/posts.md themes/my-theme/archetypes/default.md 最后两个文件仅在使用了主题并且创建新内容的hugo new命令使用的路径包含my-theme这个主题名称。
 基于目录的原型Link to heading从Hugo版本0.49开始，可以使用完整的目录作为原型模板。如下面这个原型目录:
-archetypes ├── default.md └── blogs └──Blog养成记 └── index.md draft = true date = {{ .Date }} title = &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34; authors = [&#34;&#34;] tags = [&#34;&#34;] categories = [&#34;&#34;] series = [&#34;&#34;] hugo new --kind /blogs/Blog养成记 content/blogs/Blog养成记/&#34;Hugo Archetypes 原型模板&#34; 基于上面模板目录，这个命令 会在/content/blogs/Blog养成记/&#34;Hugo Archetypes 原型模板&#34;目录创建同/blogs/Blog养成记 原型目录相同结构的文件集合。">
+archetypes ├── default.md └── blogs └──Blog养成记 └── index.md draft = true date = {{ .Date }} title = &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34; authors = [&#34;&#34;] tags = [&#34;&#34;] categories = [&#34;&#34;] externalLink = &#34;&#34; series = [&#34;&#34;] hugo new --kind /blogs/Blog养成记 content/blogs/Blog养成记/&#34;Hugo Archetypes 原型模板&#34; 基于上面模板目录，这个命令 会在/content/blogs/Blog养成记/&#34;Hugo Archetypes 原型模板&#34;目录创建同/blogs/Blog养成记 原型目录相同结构的文件集合。">
 
-<meta property="og:url" content="//localhost:1313/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/hugo-archetypes-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E6%9D%BF/">
+<meta property="og:url" content="//localhost:1313/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/hugo/">
   <meta property="og:site_name" content="RONGHUALI PAGE">
-  <meta property="og:title" content="Hugo Archetypes 原型模板">
-  <meta property="og:description" content="原型是什么?Link to heading原型（Archetypes） 是项目的原型目录内的内容模板文件，这些模板包含预定义的前言设定， 同时也可以是内容配置目录。
+  <meta property="og:title" content="Hugo">
+  <meta property="og:description" content="原型是什么?Link to heading原型 是项目的原型目录内的内容模板文件，这些模板包含预定义的前言设定， 同时也可以是内容配置目录。
 在使用 hugo new命令创建新内容时，会寻找项目中最合适的原型模板。如果项目中不包含任何原型文件，命令也会查找theme主题目录中原型文件。
 hugo new posts/my-first-post.md 上面命令创建了一个新的内容文件在content/posts/my-first-post.md，创建中使用了下面原型模板中的第一个：
 archetypes/posts.md archetypes/default.md themes/my-theme/archetypes/posts.md themes/my-theme/archetypes/default.md 最后两个文件仅在使用了主题并且创建新内容的hugo new命令使用的路径包含my-theme这个主题名称。
 基于目录的原型Link to heading从Hugo版本0.49开始，可以使用完整的目录作为原型模板。如下面这个原型目录:
-archetypes ├── default.md └── blogs └──Blog养成记 └── index.md draft = true date = {{ .Date }} title = &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34; authors = [&#34;&#34;] tags = [&#34;&#34;] categories = [&#34;&#34;] series = [&#34;&#34;] hugo new --kind /blogs/Blog养成记 content/blogs/Blog养成记/&#34;Hugo Archetypes 原型模板&#34; 基于上面模板目录，这个命令 会在/content/blogs/Blog养成记/&#34;Hugo Archetypes 原型模板&#34;目录创建同/blogs/Blog养成记 原型目录相同结构的文件集合。">
+archetypes ├── default.md └── blogs └──Blog养成记 └── index.md draft = true date = {{ .Date }} title = &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34; authors = [&#34;&#34;] tags = [&#34;&#34;] categories = [&#34;&#34;] externalLink = &#34;&#34; series = [&#34;&#34;] hugo new --kind /blogs/Blog养成记 content/blogs/Blog养成记/&#34;Hugo Archetypes 原型模板&#34; 基于上面模板目录，这个命令 会在/content/blogs/Blog养成记/&#34;Hugo Archetypes 原型模板&#34;目录创建同/blogs/Blog养成记 原型目录相同结构的文件集合。">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blogs">
@@ -88,7 +89,7 @@ archetypes ├── default.md └── blogs └──Blog养成记 └──
 
 
 
-<link rel="canonical" href="//localhost:1313/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/hugo-archetypes-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E6%9D%BF/">
+<link rel="canonical" href="//localhost:1313/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/hugo/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -213,8 +214,8 @@ archetypes ├── default.md └── blogs └──Blog养成记 └──
   <article>
     <header>
       <h1 class="title">
-        <a class="title-link" href="//localhost:1313/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/hugo-archetypes-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E6%9D%BF/">
-          Hugo Archetypes 原型模板
+        <a class="title-link" href="//localhost:1313/blogs/blog%E5%85%BB%E6%88%90%E8%AE%B0/hugo/">
+          Hugo
         </a>
       </h1>
     </header>
@@ -226,7 +227,7 @@ archetypes ├── default.md └── blogs └──Blog养成记 └──
     <span class="sr-only">Link to heading</span>
   </a>
 </h1>
-<p><strong>原型</strong>（Archetypes） 是项目的原型目录内的内容模板文件，这些模板包含预定义的<strong>前言设定</strong>， 同时也可以是<strong>内容配置目录</strong>。</p>
+<p><strong>原型</strong> 是项目的原型目录内的内容模板文件，这些模板包含预定义的<strong>前言设定</strong>， 同时也可以是<strong>内容配置目录</strong>。</p>
 <p>在使用 <code>hugo new</code>命令创建新内容时，会寻找项目中最合适的原型模板。如果项目中不包含任何原型文件，命令也会查找theme主题目录中原型文件。</p>
 <div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>hugo new posts/<span style="color:#fff;font-weight:bold">my-first</span>-post.<span style="color:#fff;font-weight:bold">md
 </span></span></span></code></pre></div><p>上面命令创建了一个新的内容文件在<code>content/posts/my-first-post.md</code>，创建中使用了下面原型模板中的第一个：</p>
@@ -257,6 +258,7 @@ archetypes ├── default.md └── blogs └──Blog养成记 └──
 </span></span><span style="display:flex;"><span>authors = [&#34;&#34;]
 </span></span><span style="display:flex;"><span>tags = [&#34;&#34;]
 </span></span><span style="display:flex;"><span>categories = [&#34;&#34;]
+</span></span><span style="display:flex;"><span>externalLink = &#34;&#34;
 </span></span><span style="display:flex;"><span>series = [&#34;&#34;]
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>hugo new --kind /blogs/Blog养成记 content/blogs/Blog养成记/<span style="color:#0ff;font-weight:bold">&#34;Hugo Archetypes 原型模板&#34;</span>
 </span></span></code></pre></div><p>基于上面模板目录，这个命令 会在<code>/content/blogs/Blog养成记/&quot;Hugo Archetypes 原型模板&quot;</code>目录创建同<code>/blogs/Blog养成记</code> 原型目录相同结构的文件集合。</p>
