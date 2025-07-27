@@ -157,7 +157,7 @@ $$
 
 邻域作用部分通过 3×3 的窗口计算城市用地在空间上的互相影响：
 $$
-\Omega_{i,j}^t =  \frac{\text{con}(S_{i,j}= \text{urban})}{3+3-1}
+\Omega_{i,j}^t =  \frac{\text{con}(S_{i,j}= \text{urban})}{3 \times 3-1}
 $$
 其中，Ω 是邻域函数，$\text{con}(S_{i,j}= \text{urban})$ 为$S_{i,j}$ 城市用地的条件函数。
 
