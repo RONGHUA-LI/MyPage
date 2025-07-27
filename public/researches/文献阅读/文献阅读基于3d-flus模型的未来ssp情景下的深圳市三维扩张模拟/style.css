@@ -1,0 +1,5 @@
+<style>
+  .custom-table td:nth-child(2) {
+    padding-left: 100px;
+  }
+</style>

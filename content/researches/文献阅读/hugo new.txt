@@ -1,0 +1,1 @@
+hugo new --kind /researches/文献阅读 content/researches/文献阅读/【文献阅读】文献名
